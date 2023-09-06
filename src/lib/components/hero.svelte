@@ -41,4 +41,10 @@
   .show {
     opacity: 1;
   }
+
+  @media(max-width: 768px) {
+    h2 {
+      margin-top: var(--size-4);
+    }
+  }
 </style>

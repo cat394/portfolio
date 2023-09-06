@@ -53,4 +53,10 @@
     display: flex;
     gap: var(--size-4);
   }
+
+  @media(max-width: 768px) {
+    .audio-btn {
+      padding: var(--size-3);
+    }
+  }
 </style>
