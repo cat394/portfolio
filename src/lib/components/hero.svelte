@@ -44,7 +44,7 @@
 
   @media(max-width: 768px) {
     h2 {
-      margin-top: var(--size-4);
+      margin-top: var(--size-5);
     }
   }
 </style>
