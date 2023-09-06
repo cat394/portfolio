@@ -28,7 +28,7 @@ export const creations: Creation[] = [
   },
   {
     title: "Vell mo",
-    description: "行きつけの美容室のWebサイトを作りました。シンプルながらもカラフルで可愛らしいデザインになっています。",
+    description: "行きつけの美容室のWebサイトを作りました。シンプルながらもカラフルで可愛らしいデザインになっています。ダークテーマもあるので目に優しいのも特徴です。",
     url: "https://vellmo.netlify.app",
     skills: ["React"],
     images: [

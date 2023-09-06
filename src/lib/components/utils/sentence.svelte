@@ -4,6 +4,7 @@
 
 <style>
   .sentence {
-    line-height: 1.8;
+    line-height: var(--font-lineheight-5);
+    max-inline-size: 48ch;
   }
 </style>

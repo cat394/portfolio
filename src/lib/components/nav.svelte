@@ -9,7 +9,7 @@
 		{#each navs as nav}
 			<li>
 				<span class="icon"><Triangle stroke-width="0.5px"size="0.8em" /></span>
-				<a href={`/${nav}`}>{capitalizeFirstLetter(nav)}</a>
+				<a href={`#${nav}`}>{capitalizeFirstLetter(nav)}</a>
 			</li>
 		{/each}
 	</ul>
@@ -31,14 +31,16 @@
 		position: relative;
 	}
 
+
 	.links a::after {
     content: '';
     position: absolute;
-    width: 100%;
-    height: 1px;
+		border-radius: var(--radius-round);
+		width: 100%;
+    height: 1.5px;
     bottom: 0;
     left: 0;
-    background-color: var(--brand);
+    background-color: var(--accent);
     transform: scaleX(1);
     transform-origin: bottom left;
     transition: transform 0.8s ease;
@@ -48,6 +50,7 @@
 		transform: scaleX(0);
 		transform-origin: bottom right;
 	}
+
 
 	.icon {
 		rotate: 180deg;
@@ -62,5 +65,5 @@
     50% {
         translate: 0 7px;
     }
-}
+	}
 </style>

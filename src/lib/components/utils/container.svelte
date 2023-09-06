@@ -4,15 +4,22 @@
   export let id: string = "";
   export let cover: boolean = false;
   export let verticalCenter: boolean = false;
+  export let bgColor: string = "var(--background-1)"
 </script>
 
-<section class="surface-4" class:cover class:verticalCenter {id}>
+<section 
+  class:cover 
+  class:verticalCenter 
+  {id}
+  style:background={bgColor}
+>
   <slot />
 </section>
 
 <style>
   section {
-    padding-block: var(--size-6);
+    padding-block: var(--size-fluid-5);
+    scroll-margin-top: 50px;
   }
 
   .cover {

@@ -1,11 +1,20 @@
 <script lang="ts">
-  export let size: 'sm' | 'md' | 'lg' = 'md';
-  export let thickness = "1px";
-  export let color: string = "none";
+  export let space: 'sm' | 'md' | 'lg' = 'md';
+  export let lineWidth = "100%";
+  export let lineThickness = "1px";
+  export let lineColor = "none";
+  export let lineOpacity = "0.3";
 </script>
 
-<div class="divider {size}">
-  <div style="width: 100%; height: {thickness}; background-color: {color};"></div>
+<div class="divider {space}">
+  <div
+    style:margin-inline="auto" 
+    style:width="{lineWidth}"
+    style:height="{lineThickness}"
+    style:background-color="{lineColor}"
+    style:opacity="{lineOpacity}"
+  >
+  </div>
 </div>
 
 <style>

@@ -26,22 +26,23 @@
 </ul>
 
 <style>
-  .skill-list > li {
-    padding-left: 0;
-    margin-bottom: var(--size-5);
+  b {
+    display: block;
+    padding-bottom: var(--size-3);
   }
 
-  .sub-list-horizontal {
-    display: flex;
-    gap: var(--size-4);
-    padding-left: 0;
+  .skill-list > li {
+    margin-bottom: var(--size-8);
   }
 
   .sub-list-vertical {
     padding-left: var(--size-5);
   }
 
-  .sub-list-vertical > li {
-    margin-bottom: var(--size-8);
+  .sub-list-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-4);
+    padding-left: var(--border-size-2);
   }
 </style>

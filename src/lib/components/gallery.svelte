@@ -1,35 +1,31 @@
 <script>
  import { creations } from "$lib/data/creations";
-  import Card from "./utils/card/card.svelte";
-  import CardBody from "./utils/card/cardBody.svelte";
-  import CardFoot from "./utils/card/cardFoot.svelte";
-  import Carousel from "./utils/carousel.svelte";
-  import LinkBtn from "./utils/linkBtn.svelte";
-	import CardLeft from "./utils/card/cardLeft.svelte";
-  import CardRight from "./utils/card/cardRight.svelte";
+  import Card from "$lib/components/utils/card/card.svelte";
+  import CardBody from "$lib/components/utils/card/cardBody.svelte";
+  import CardFoot from "$lib/components/utils/card/cardFoot.svelte";
+  import LinkBtn from "$lib/components/utils/linkBtn.svelte";
+	import CardLeft from "$lib/components/utils/card/cardLeft.svelte";
+  import CardRight from "$lib/components/utils/card/cardRight.svelte";
+	import Carousel from "$lib/components/utils/carousel.svelte";
 </script>
 
 <div class="gallery">
   {#each creations as creation}
     <Card>
       <CardLeft>
-        <simple-carousel>
-          {#each creation.images as image}
-            <img src={image.src} width={image.width} height={image.height} alt={image.alt} />
-          {/each}
-        </simple-carousel>
+        <Carousel images={creation.images} />
       </CardLeft>
       <CardRight>
         <CardBody>
-          <div>Title：</div>
+          <div class="itemName">Title：</div>
           <h4>{creation.title}</h4>
         </CardBody>
         <CardBody>
-          <div>Description：</div>
+          <div class="itemName">Description：</div>
           <p>{creation.description}</p>
         </CardBody>
         <CardBody>
-          <span>Skills：</span>
+          <div class="itemname">Skills：</div>
           <ul class="skills">
             {#each creation.skills as skill}
               <li>{skill}</li>
@@ -48,9 +44,12 @@
 <style>
   .gallery {
     display: grid;
-    gap: var(--size-5);
+    gap: var(--size-fluid-5);
   }
 
+  .itemName {
+    margin-bottom: var(--size-2);
+  }
   .skills {
     display: flex;
     gap: var(--size-5);

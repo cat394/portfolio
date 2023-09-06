@@ -6,7 +6,12 @@
   .card-right {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    gap: var(--size-3);
+  }
+
+  @media(max-width: 768px) {
+    .card-right {
+      margin-top: var(--size-5);
+    }
   }
 </style>
 
