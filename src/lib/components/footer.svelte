@@ -31,7 +31,7 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		column-gap: var(--size-4);
-		row-gap: var(--size-3);
+		row-gap: var(--size-2);
 		color: var(--text-2);
 		font-size: var(--font-size-sm);
 	}
