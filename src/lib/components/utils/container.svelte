@@ -1,27 +1,27 @@
 <script lang="ts">
   import ContentsField from "$lib/components/utils/contentsField.svelte";
   
-  export let id: string = "";
-  export let cover: boolean = false;
-  export let verticalCenter: boolean = false;
-  export let bgColor: string = "var(--background-1)"
+  export let id = "";
+  export let cover = false;
+  export let verticalCenter = false;
+  export let bgColor = "var(--background-1)"
 </script>
 
 <section 
-  class:cover 
-  class:verticalCenter 
   {id}
+  class:cover
+  class:verticalCenter 
   style:background={bgColor}
+  {...$$props}
 >
   <slot />
 </section>
 
 <style>
   section {
-    padding-block: var(--size-fluid-5);
     scroll-margin-top: 50px;
+    padding-block: var(--size-fluid-5);
   }
-
   .cover {
     height: 100dvh;
   }
