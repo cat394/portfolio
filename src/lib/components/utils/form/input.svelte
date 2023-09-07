@@ -12,3 +12,9 @@
     <input {type} {placeholder} {required} {...$$props} />
   </div>
 </Label>
+
+<style>
+  input {
+    width: 80%;
+  }
+</style>

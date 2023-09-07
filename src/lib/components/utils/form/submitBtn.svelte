@@ -25,7 +25,7 @@
     border-radius: var(--radius-2);
     font-size: var(--font-size-sm);
     position: relative;
-    padding: var(--size-3);
+    padding: var(--size-2);
   }
 
   .submit-btn:hover {
@@ -33,7 +33,6 @@
   }
 
   .wrapper {
-    
     display: flex;
     justify-content: center;
   }
@@ -65,11 +64,4 @@
         translate: 7px;
     }
 	}
-
-  @media(max-width: 768px) {
-    .submit-btn {
-      max-width: 250px;
-      padding: var(--size-2);
-    }
-  }
 </style>

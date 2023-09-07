@@ -3,6 +3,7 @@ html {
 	--space-between-content: calc(var(--size-content-1) / 2); 
 	--background-opacity: 70%;
 	--border-thin: var(--border-size-1) solid;
+	--input-field-width: 80%;
 
 	--font-size-sm: var(--font-size-2);
 	--font-size-md: var(--font-size-4);
