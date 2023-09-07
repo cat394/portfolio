@@ -127,7 +127,7 @@ a:visited {
 }
 
 p {
-	min-inline-size: 100%;
+	min-width: 100%;
 }
 
 img {
