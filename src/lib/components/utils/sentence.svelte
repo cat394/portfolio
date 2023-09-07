@@ -5,6 +5,6 @@
 <style>
   .sentence {
     line-height: var(--font-lineheight-5);
-    max-inline-size: 48ch;
+    max-width: 45ch;
   }
 </style>
