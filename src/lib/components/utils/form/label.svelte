@@ -5,7 +5,7 @@
 
 <label>
   <div>
-    <span class="formName">{formName}</span>
+    {formName}
     {#if required}
       <span class="input-required">*</span>
     {/if}
@@ -14,10 +14,6 @@
 </label>
 
 <style>
-  .formName {
-    display: inline-block;
-    margin-bottom: var(--size-3);
-  }
   .input-required {
     color: red;
   }
