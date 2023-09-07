@@ -6,9 +6,3 @@
 <Label formName="Your message">
   <textarea {placeholder} {...$$props}></textarea>
 </Label>
-
-<style>
-  textarea {
-    width: var(--input-field-width);
-  }
-</style>

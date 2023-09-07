@@ -171,10 +171,18 @@ input, textarea {
 	background-color: transparent;
 	border-bottom: var(--border-thin) var(--text-1);
 	border-radius: 0;
+	transition: border-color 500ms;
+}
+
+@media(min-width: 769px) {
+	input, textarea {
+		width: var(--input-field-width);
+	}
 }
 
 input:focus, textarea:focus {
-	border: none;
+	border-color: var(--brand);
+	outline: none;
 }
 
 input::placeholder,
