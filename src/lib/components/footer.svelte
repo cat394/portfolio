@@ -7,7 +7,7 @@
 	<ContentsField horizontalPosition="center">
 		<small>
 			<span class="siteName">{config.title}</span>
-			<span class="copyright">Copyright {new Date().getFullYear()} Ryo</span>
+			<span class="copyright">&copy; {new Date().getFullYear()} Ryo</span>
 		</small>
 		<small>
 			<span>Music</span>
@@ -28,8 +28,10 @@
 	small {
 		width: 100%;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
-		gap: var(--size-3);
+		column-gap: var(--size-4);
+		row-gap: var(--size-3);
 		color: var(--text-2);
 		font-size: var(--font-size-sm);
 	}
