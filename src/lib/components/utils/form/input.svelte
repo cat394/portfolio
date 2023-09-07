@@ -15,6 +15,12 @@
 
 <style>
   input {
-    width: 80%;
+    width: var(--input-field-width);
+  }
+
+  @media(max-width: 768px) {
+    input {
+      width: 100%;
+    }
   }
 </style>
