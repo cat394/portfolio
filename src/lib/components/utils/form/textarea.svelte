@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Label from "./label.svelte";
-  export let placeholder = "";
+	import Label from './label.svelte';
+	export let placeholder = '';
 </script>
 
 <Label formName="Your message">
-  <textarea {placeholder} {...$$props}></textarea>
+	<textarea {placeholder} {...$$props} />
 </Label>

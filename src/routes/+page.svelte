@@ -16,7 +16,6 @@
 	</div>
 </div>
 
-
 <style>
 	.container {
 		min-height: 100dvh;
@@ -28,7 +27,7 @@
 		font-size: 1.2rem;
 	}
 	.title {
-		margin-bottom: .5em;
+		margin-bottom: 0.5em;
 	}
 	.wrapper {
 		position: relative;
@@ -47,7 +46,7 @@
 		border-radius: 10px;
 	}
 	.error {
-		padding:0;
+		padding: 0;
 		margin: 0;
 		position: absolute;
 		bottom: -3em;

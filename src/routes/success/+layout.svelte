@@ -7,17 +7,16 @@
 
 	import 'open-props/style';
 	import 'open-props/normalize';
-	import "open-props/colors-hsl";
+	import 'open-props/colors-hsl';
 
 	import '../../app.css';
-	
 
 	const audioData = {
-    title: "星のメロディー",
-    author: "Neal K",
-    src: "/assets/audio/star_melody.mp3",
-    thumbImage: "/assets/images/star_melody.webp"
-  };
+		title: '星のメロディー',
+		author: 'Neal K',
+		src: '/assets/audio/star_melody.mp3',
+		thumbImage: '/assets/images/star_melody.webp'
+	};
 </script>
 
 <div class="layout">
