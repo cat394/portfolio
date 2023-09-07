@@ -4,44 +4,37 @@
 </script>
 
 <footer>
-	<ContentsField>
+	<ContentsField horizontalPosition="center">
 		<small>
 			<span class="siteName">{config.title}</span>
-			<span>&copy {new Date().getFullYear()} Ryo</span>
+			<span class="copyright">Copyright {new Date().getFullYear()} Ryo</span>
+		</small>
+		<small>
+			<span>Music</span>
+			<span>by Neal K</span>
 		</small>
 	</ContentsField>
 </footer>
 
 <style>
 	footer {
-		text-align: center;
-		padding-block: var(--size-7);
+		padding-top: var(--size-7);
+		padding-bottom: 100px;
 		border-top: 1px solid var(--border);
 		background: var(--background-1);
 		margin-top: var(--space-between-content);
-		padding-bottom: 100px;
 	}
 
 	small {
 		width: 100%;
+		display: flex;
+		justify-content: center;
+		gap: var(--size-3);
 		color: var(--text-2);
 		font-size: var(--font-size-sm);
 	}
 
-	.siteName {
-		display: inline-block;
-		margin-right: var(--size-3);
-	}
-
-	@media(max-width: 768px) {
-		.siteName {
-			margin: 0;
-		}
-
-		small {
-			display: grid;
-			justify-content: center;
-			gap: var(--size-2);
-		}
+	small:last-child {
+		margin-top: var(--size-2);
 	}
 </style>
