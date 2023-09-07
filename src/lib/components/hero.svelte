@@ -10,7 +10,7 @@
   const navigationShow = () => show = true;
 </script>
 
-<Container cover verticalCenter bgColor="none">
+<Container cover verticalCenter bgColor="none" style="margin-top: 70px; padding-block: 0;">
   <ContentsField>
     <DelayedFly on:introend={navigationShow}>
       <h2><span>Hello!</span><span>I'm...</span></h2>
@@ -40,11 +40,5 @@
   }
   .show {
     opacity: 1;
-  }
-
-  @media(max-width: 768px) {
-    h2 {
-      margin-top: var(--size-5);
-    }
   }
 </style>
