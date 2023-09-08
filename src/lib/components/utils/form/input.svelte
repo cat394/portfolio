@@ -5,10 +5,19 @@
 	export let type = 'text';
 	export let required = true;
 	export let placeholder = 'Type text here';
+
+	let currentScrollY: number;
+
+	function handleFocus() {
+		currentScrollY = window.scrollY;
+		setTimeout(() => {
+			window.scrollTo(0, currentScrollY);
+		}, 0);
+	}
 </script>
 
 <Label {formName}>
 	<div>
-		<input {type} {placeholder} {required} {...$$props} />
+		<input on:focus={handleFocus} {type} {placeholder} {required} {...$$props} />
 	</div>
 </Label>
