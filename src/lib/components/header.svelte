@@ -11,7 +11,7 @@
 			<h1>Who is Ryo?</h1>
 			<ul class="social-icons">
 				<li>
-					<a class="twitter" href="https://twitter.com/RYO_378">
+					<a class="twitter" href="https://twitter.com/RYO_001231">
 						<Twitter strokeWidth={$strokeWidth} />
 					</a>
 				</li>
@@ -21,7 +21,7 @@
 					</a>
 				</li>
 				<li>
-					<a class="instagram" href="https://www.instagram.com/ryo_33579/">
+					<a class="instagram" href="https://www.instagram.com/ryo_001231/">
 						<Instagram strokeWidth={$strokeWidth} />
 					</a>
 				</li>
