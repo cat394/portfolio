@@ -5,22 +5,13 @@
 	import { audioGroupState } from '$lib/stores';
 	import { fly } from 'svelte/transition';
 
-	type AudioData = {
-		title: string;
-		author: string;
-		src: string;
-		thumbImage: string;
-	};
-
-	export let audioData: AudioData;
-
 	let audioElement: HTMLAudioElement;
 	let audioController: HTMLDivElement;
 
 	// Reactive statement to handle global audio state changes
 	$: {
 		if (audioElement) {
-			if ($audioGroupState.currentSrc === audioData.src && $audioGroupState.isPlaying) {
+			if ($audioGroupState.currentSrc && $audioGroupState.isPlaying) {
 				audioElement.play();
 			} else {
 				audioElement.pause();
@@ -33,8 +24,7 @@
 	const togglePlayback = () => {
 		audioGroupState.update((state) => ({
 			...state,
-			isPlaying: $audioGroupState.currentSrc === audioData.src ? !state.isPlaying : true,
-			currentSrc: audioData.src
+			isPlaying: $audioGroupState.currentSrc ? !state.isPlaying : true
 		}));
 	};
 
@@ -61,19 +51,19 @@
 {#if showController}
 	<div in:fly={{ y: 100, duration: 1000 }} class="audio-controller" bind:this={audioController}>
 		<audio
-			src={audioData.src}
+			src={$audioGroupState.currentSrc}
 			bind:this={audioElement}
 			on:ended={() => audioGroupState.update((state) => ({ ...state, currentTime: 0 }))}
 			on:loadedmetadata={() => (audioElement.loop = $audioGroupState.loop)}
 		/>
 
 		<div class="image-area">
-			<img src={audioData.thumbImage} alt={audioData.title} width="336" height="168" />
+			<img src={$audioGroupState.thumbImage} alt={$audioGroupState.title} width="336" height="168" />
 		</div>
 
 		<div class="text-area">
-			<p>{audioData.title}</p>
-			<p>{audioData.author}</p>
+			<p>{$audioGroupState.title}</p>
+			<p>{$audioGroupState.author}</p>
 		</div>
 
 		<div class="btn-area">
@@ -106,7 +96,7 @@
 	img {
 		max-height: 60px;
 		width: auto;
-		border-radius: 0;
+		border-radius: var(--size-2);
 	}
 
 	button {

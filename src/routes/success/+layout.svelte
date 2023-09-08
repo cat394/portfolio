@@ -10,13 +10,6 @@
 	import 'open-props/colors-hsl';
 
 	import '../../app.css';
-
-	const audioData = {
-		title: '星のメロディー',
-		author: 'Neal K',
-		src: '/assets/audio/star_melody.mp3',
-		thumbImage: '/assets/images/star_melody.webp'
-	};
 </script>
 
 <div class="layout">
@@ -29,7 +22,7 @@
 			<slot />
 		</main>
 		<Footer />
-		<AudioController {audioData} />
+		<AudioController />
 	</div>
 </div>
 

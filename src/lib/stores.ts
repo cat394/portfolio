@@ -1,6 +1,9 @@
 import { writable, readable } from 'svelte/store';
 
 type AudioGroupState = {
+	title: string,
+	author: string,
+	thumbImage: string,
 	isPlaying: boolean;
 	loop: boolean;
 	currentTime: number;
@@ -10,6 +13,9 @@ type AudioGroupState = {
 export const strokeWidth = readable('1px');
 
 export const audioGroupState = writable<AudioGroupState>({
+	title: '',
+	author: '',
+	thumbImage: '',
 	isPlaying: false,
 	loop: true,
 	currentTime: 0,

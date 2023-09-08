@@ -1,57 +1,59 @@
 <script lang="ts">
-	import { Play, Pause } from 'lucide-svelte';
-	import { strokeWidth, audioGroupState } from '$lib/stores';
+  import { Play, Pause } from "lucide-svelte";
+	import { strokeWidth } from "$lib/stores";
+  import { audioGroupState } from "$lib/stores";
 
-	export let audioSrc: string;
-	let isPlaying = false;
+  export let src: string;
+  export let title: string;
+  export let author: string;
+  export let thumbImage: string;
 
-	const togglePlayback = () => {
-		const isCurrentAudio = $audioGroupState.currentSrc === audioSrc;
+  let isPlaying = false;
 
-		if (isCurrentAudio && $audioGroupState.isPlaying) {
-			audioGroupState.update((state) => ({ ...state, isPlaying: false }));
-		} else {
-			audioGroupState.update((state) => ({ ...state, isPlaying: true, currentSrc: audioSrc }));
-		}
+  const togglePlayback = () => {
+    if ($audioGroupState.currentSrc !== src || !$audioGroupState.isPlaying) {
+      audioGroupState.update(state => ({ 
+        ...state, 
+        isPlaying: true, 
+        currentSrc: src,
+        title,
+        author,
+        thumbImage
+      }));
+      isPlaying = true;
+    } else {
+      audioGroupState.update(state => ({ ...state, isPlaying: false }));
+      isPlaying = false;
+    }
+  };
 
-		isPlaying = $audioGroupState.isPlaying && isCurrentAudio;
-	};
-
-	$: {
-		const isCurrentAudio = $audioGroupState.currentSrc === audioSrc;
-		isPlaying = isCurrentAudio && $audioGroupState.isPlaying;
-	}
+  $: if ($audioGroupState.currentSrc !== src) {
+    isPlaying = false;
+  }
 </script>
 
 <div class="audio-btn">
 	<!-- Playback toggle button -->
-	<button class="ax-btn" aria-label={isPlaying ? 'Pause' : 'Play'} on:click={togglePlayback}>
+	<button aria-label={isPlaying ? "Pause" : "Play"} on:click={togglePlayback}>
 		{#if !isPlaying}
 			<Play strokeWidth={$strokeWidth} />
 		{:else}
 			<Pause strokeWidth={$strokeWidth} />
 		{/if}
 	</button>
-	<div class="text"><slot name="text" /></div>
+	<p>{title}</p>
 </div>
 
 <style>
 	.audio-btn {
 		font-size: var(--font-size-sm);
-		height: 100%;
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: 10px;
 		padding: var(--size-5);
 		border-radius: var(--radius-round);
 		background-color: var(--background-1);
 		border: var(--border-thin) var(--text-1);
-	}
-
-	.text {
-		display: flex;
-		gap: var(--size-4);
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: var(--size-2);
 	}
 
 	@media (max-width: 768px) {

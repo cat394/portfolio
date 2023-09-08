@@ -8,6 +8,13 @@
 	let show = false;
 
 	const navigationShow = () => (show = true);
+
+	const bgm = {
+		title: '星のメロディー',
+		author: 'Neal K',
+		src: '/assets/audio/star_melody.mp3',
+		thumbImage: '/assets/images/star_melody.webp'
+	};
 </script>
 
 <Container cover verticalCenter bgColor="none" style="margin-top: 70px; padding-block: 0;">
@@ -17,9 +24,7 @@
 		</DelayedFly>
 		<div class="wrapper" class:show>
 			<Nav />
-			<AudioBtn audioSrc="/assets/audio/star_melody.mp3">
-				<span slot="text">～Site theme BGM～</span>
-			</AudioBtn>
+			<AudioBtn {...bgm} />
 		</div>
 	</ContentsField>
 </Container>

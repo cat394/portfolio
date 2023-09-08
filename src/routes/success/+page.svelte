@@ -8,7 +8,6 @@
 	import Gallery from '$lib/components/gallery.svelte';
 	import Divider from '$lib/components/utils/divider.svelte';
 	import Form from '$lib/components/form.svelte';
-	import { Space } from 'lucide-svelte';
 </script>
 
 <Hero />

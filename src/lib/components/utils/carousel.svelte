@@ -4,7 +4,7 @@
 	import { ChevronRight, ChevronLeft } from 'lucide-svelte';
 	import { onMount, afterUpdate } from 'svelte';
 
-	export let images: Image[] = [];
+	export let images: Image[];
 	export let autoPlay = true;
 	export let duration = 2000;
 	export let autoPlayInterval = 3000;
