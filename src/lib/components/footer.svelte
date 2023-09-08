@@ -11,12 +11,13 @@
 		</small>
 		<small>
 			<span>Music</span>
-			<span>by Neal K</span>
+			<span>by <a href="https://www.youtube.com/@NealKSounds">Neal K</a></span>
 		</small>
 	</ContentsField>
 </footer>
 
 <style>
+
 	footer {
 		padding-top: var(--size-7);
 		padding-bottom: 100px;
@@ -38,5 +39,14 @@
 
 	small:last-child {
 		margin-top: var(--size-2);
+	}
+
+	a {
+		font-size: inherit;
+		text-decoration: underline;
+	}
+
+	a:hover {
+		text-decoration: none;
 	}
 </style>
