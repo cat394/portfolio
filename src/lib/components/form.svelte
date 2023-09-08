@@ -4,7 +4,7 @@
 	import SubmitBtn from './utils/form/submitBtn.svelte';
 </script>
 
-<form>
+<form action="https://ssgform.com/s/fmGjPCLMYoFD">
 	<Input type="text" formName="Your name" placeholder="名前を入力してください" name="name" />
 	<Input
 		type="email"
