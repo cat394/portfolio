@@ -27,9 +27,11 @@
     }
   };
 
-  $: if ($audioGroupState.currentSrc !== src) {
+  $: if ($audioGroupState.currentSrc !== src || !$audioGroupState.isPlaying) {
     isPlaying = false;
-  }
+    } else if ($audioGroupState.currentSrc === src && $audioGroupState.isPlaying) {
+        isPlaying = true;
+    }
 </script>
 
 <div class="audio-btn">
