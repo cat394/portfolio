@@ -9,7 +9,7 @@
 	import 'open-props/normalize';
 	import 'open-props/colors-hsl';
 
-	import '../../app.css';
+	import '../app.css';
 </script>
 
 <div class="layout">
