@@ -12,3 +12,16 @@
 		<input {type} {placeholder} {required} {...$$props} />
 	</div>
 </Label>
+
+<style>
+	input {
+		min-width: 500px;
+		overflow: auto;
+	}
+
+	@media(max-width: 768px) {
+		input {
+			min-width: 250px;
+		}
+	}
+</style>

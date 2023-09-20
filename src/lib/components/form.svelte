@@ -27,6 +27,8 @@
 	form {
 		display: grid;
 		gap: var(--size-8);
+		justify-content: center;
+
 	}
 
 	.center {

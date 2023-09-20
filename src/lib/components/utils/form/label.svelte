@@ -14,6 +14,10 @@
 </label>
 
 <style>
+	label {
+		width: 100%;
+		overflow: auto;
+	}
 	.input-required {
 		color: red;
 	}
