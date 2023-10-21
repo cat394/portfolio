@@ -7,8 +7,22 @@
 	import List from '$lib/components/utils/list/list.svelte';
 	import Gallery from '$lib/components/gallery.svelte';
 	import Divider from '$lib/components/utils/divider.svelte';
-	import Form from '$lib/components/form.svelte';
+	import Label from '$lib/components/utils/form/label.svelte';
+	import Input from '$lib/components/utils/form/input.svelte';
+	import Textarea from '$lib/components/utils/form/textarea.svelte';
+	import SubmitBtn from '$lib/components/utils/form/submitBtn.svelte';
+	import { superForm } from 'sveltekit-superforms/client';
+	import { contactSchema } from '$lib/validateSchema';
+	import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
+
+	export let data;
+
+	const { form, errors, enhance } = superForm(data.form, {
+		validators: contactSchema
+	});
 </script>
+
+
 
 <Hero />
 <Container id="greeting">
@@ -60,6 +74,62 @@
 <Container id="contact">
 	<ContentsField>
 		<h3>Contact</h3>
-		<Form />
+		<form method="POST" use:enhance>
+			<Label formName="Your name">
+				<Input 
+					type="text"
+					placeholder="名前を入力してください"
+					name="name"
+					bind:value={$form.name}
+				/>
+				<div slot="errorMessage">
+					{#if $errors.name}
+						{$errors.name}
+					{/if}
+				</div>
+			</Label>
+			<Label formName="Your email">
+				<Input
+					type="email"
+					placeholder="メールアドレスを入力してください"
+					name="email"
+					bind:value={$form.email}
+				/>
+				<div slot="errorMessage">
+					{#if $errors.email}
+						{$errors.email}
+					{/if}
+				</div>
+			</Label>
+			<Label formName="Your message">
+				<Textarea
+					placeholder="お問い合わせ内容を入力してください"
+					name="message"
+					cols="30" rows="8"
+					bind:value={$form.message}
+				/>
+				<div slot="errorMessage">
+					{#if $errors.message}
+						{$errors.message}
+					{/if}
+				</div>
+			</Label>
+			<div class="submit-btn">
+				<SubmitBtn />
+			</div>
+		</form>
 	</ContentsField>
 </Container>
+
+<style>
+	form {
+		display: grid;
+		gap: var(--size-8);
+		justify-content: center;
+	}
+
+	.submit-btn {
+		display: flex;
+		justify-content: center;
+	}
+</style>

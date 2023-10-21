@@ -1,21 +1,14 @@
 <script lang="ts">
 	import Label from './label.svelte';
 	export let placeholder = '';
+	export let value = ""
 </script>
 
-<Label formName="Your message">
-	<textarea {placeholder} {...$$props} />
-</Label>
+<textarea {placeholder} {...$$props} bind:value />
 
 <style>
 	textarea {
-		min-width: 500px;
-		overflow: auto;
-	}
-
-	@media(max-width: 768px) {
-		textarea {
-			min-width: 250px;
-		}
+		width: 100%;
+		margin: auto;
 	}
 </style>

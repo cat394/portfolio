@@ -1,6 +1,4 @@
 <script lang="ts">
-	import ContentsField from '$lib/components/utils/contentsField.svelte';
-
 	export let id = '';
 	export let cover = false;
 	export let verticalCenter = false;
@@ -13,6 +11,7 @@
 
 <style>
 	section {
+		width: 100%;
 		scroll-margin-top: 50px;
 		padding-block: var(--size-fluid-5);
 	}

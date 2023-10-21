@@ -14,33 +14,31 @@
 
 <div class="layout">
 	<Bubbles />
+	<Topfixed>
+		<Header />
+	</Topfixed>
 	<div class="contents">
-		<Topfixed>
-			<Header />
-		</Topfixed>
 		<main>
 			<slot />
 		</main>
 		<Footer />
-		<AudioController />
 	</div>
+	<AudioController />
 </div>
 
 <style>
-	.layout {
-		max-width: 1440px;
-	}
-
 	.contents {
-		/* Sticky footer */
+		width: 100%;
 		display: grid;
-		grid-template-rows: auto 1fr auto;
+		grid-template-rows: 1fr auto;
 		min-height: 100vh;
 		position: relative;
 		z-index: 1;
 	}
 
 	main {
+		width: 100%;
+		height: 100%;
 		display: grid;
 		gap: var(--space-between-content);
 	}
