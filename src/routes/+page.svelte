@@ -14,6 +14,7 @@
 	import { superForm } from 'sveltekit-superforms/client';
 	import { contactSchema } from '$lib/validateSchema';
 	import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
+	import Position from '$lib/components/utils/Position.svelte';
 
 	export let data;
 
@@ -114,9 +115,9 @@
 					{/if}
 				</div>
 			</Label>
-			<div class="submit-btn">
+			<Position position="center">
 				<SubmitBtn />
-			</div>
+			</Position>
 		</form>
 	</ContentsField>
 </Container>
@@ -125,11 +126,6 @@
 	form {
 		display: grid;
 		gap: var(--size-8);
-		justify-content: center;
-	}
-
-	.submit-btn {
-		display: flex;
 		justify-content: center;
 	}
 </style>
