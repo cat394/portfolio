@@ -4,7 +4,7 @@
 このポートフォリオサイトは、Ryoのプロジェクトとスキル、作成したウェブサイトを紹介するためのウェブサイトです。
 
 ## 使用技術
-- HTML/CSS/JavaScript
+- HTML/CSS/TypeScript
 - SvelteKit
 
 ## セットアップ方法
