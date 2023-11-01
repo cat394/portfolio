@@ -115,6 +115,7 @@
 		padding-right: var(--size-7);
 		background-color: var(--background-1);
 		overflow: hidden;
+		z-index: var(--layer-5);
 	}
 
 	.text-area {
