@@ -6,7 +6,7 @@
 	export let blank: boolean = false;
 </script>
 
-<a {href} {...$$props}>
+<a {href} {...$$props} target={blank ? '_blank' : '_self'}>
 	<div class="wrapper">
 		<slot />
 		{#if blank}
