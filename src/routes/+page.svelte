@@ -22,8 +22,6 @@
 	});
 </script>
 
-
-
 <Hero />
 <Container id="greeting">
 	<ContentsField>
@@ -69,7 +67,7 @@
 <Container id="gallery">
 	<ContentsField>
 		<h3>Gallery</h3>
-		<Gallery />
+		<Gallery siteInfos={data.siteInfos} />
 	</ContentsField>
 </Container>
 <Container id="contact">
