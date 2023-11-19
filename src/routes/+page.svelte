@@ -14,6 +14,7 @@
 	import { superForm } from 'sveltekit-superforms/client';
 	import { contactSchema } from '$lib/validateSchema';
 	import Position from '$lib/components/utils/Position.svelte';
+	import { creations } from '$lib/data/creations';
 
 	export let data;
 
@@ -67,7 +68,7 @@
 <Container id="gallery">
 	<ContentsField>
 		<h3>Gallery</h3>
-		<Gallery siteInfos={data.siteInfos} />
+		<Gallery siteInfos={creations} />
 	</ContentsField>
 </Container>
 <Container id="contact">

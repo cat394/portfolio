@@ -8,16 +8,7 @@
 	import CardRight from '$lib/components/utils/card/cardRight.svelte';
 	import { Splide, SplideSlide, SplideTrack } from '@splidejs/svelte-splide';
 	import { ChevronLeft, ChevronRight } from 'lucide-svelte';
-
-	type SiteInfos = {
-		skills: string[];
-		id: number;
-		url: string;
-		title: string;
-		description: string;
-		imageName: string;
-		numberOfImage: number;
-	}[];
+	import type {SiteInfos} from '$lib/data/creations'
 
 	export let siteInfos: SiteInfos;
 </script>
@@ -44,6 +35,8 @@
 								<img
 									src="../../assets/images/{imageSource}.webp"
 									alt="{site.title}のサムネイル{i + 1}"
+									width="1000"
+									height="555"
 								/>
 							</SplideSlide>
 						{/each}
@@ -120,7 +113,7 @@
 	}
 
 	.btn-wrapper:hover {
-		color: white;
+		color: black;
 		background-color: var(--accent-dark);
 	}
 </style>
