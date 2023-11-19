@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Label from './label.svelte';
 
-	export let formName = 'Type your text';
 	export let required = true;
 	export let placeholder = 'Type text here';
 	export let value: string = "";

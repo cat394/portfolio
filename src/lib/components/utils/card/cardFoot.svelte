@@ -1,8 +1,3 @@
-<script lang="ts">
-	import { ExternalLink } from 'lucide-svelte';
-	import LinkBtn from '../linkBtn.svelte';
-</script>
-
 <div class="card-foot">
 	<slot />
 </div>

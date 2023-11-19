@@ -13,7 +13,7 @@
 		title: '星のメロディー',
 		author: 'Neal K',
 		src: '/assets/audio/star_melody.mp3',
-		thumbImage: '/assets/images/bgm_thumb.webp'
+		thumbImage: '/images/bgm_thumb.webp'
 	};
 </script>
 

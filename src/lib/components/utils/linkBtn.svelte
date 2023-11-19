@@ -27,7 +27,7 @@
 	}
 
 	a:hover {
-		color: white;
+		color: black;
 		background-color: var(--accent);
 	}
 
