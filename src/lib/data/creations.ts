@@ -32,7 +32,7 @@ const websites =[
   {
     title: 'Guide Doc',
     description: '私に仕事を依頼してもらえる方に向けて書いたWebサイトの制作過程を記したドキュメントです。画像付きで分かりやすく説明していると思います。',
-    url: 'https://ryo-create-site.vercel.app',
+    url: 'https://ryo-create-site.netlify.app',
     skills: 'Astro,starlight',
     imageName: 'guide'
   },
