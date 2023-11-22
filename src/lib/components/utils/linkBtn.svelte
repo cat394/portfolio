@@ -28,7 +28,7 @@
 
 	a:hover {
 		color: black;
-		background-color: var(--accent);
+		background-color: var(--accent-dark);
 	}
 
 	.wrapper {
