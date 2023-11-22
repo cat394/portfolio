@@ -97,6 +97,7 @@ h1, h2, h3, h4, h5, b {
 
 p {
 	letter-spacing: var(--font-letterspacing-3);
+	min-width: 100%;
 }
 
 h2, h3 {
@@ -124,10 +125,6 @@ a {
 
 a:visited {
 	color: inherit;
-}
-
-p {
-	min-width: 100%;
 }
 
 img {
@@ -197,4 +194,13 @@ textarea::placeholder {
 	display: inline-block;
 	cursor: pointer;
 	font: inherit;
+}
+
+.prose {
+	max-width: 35em;
+}
+
+.prose p {
+	letter-spacing: var(--font-letterspacing-3);
+	min-width: 100%;
 }

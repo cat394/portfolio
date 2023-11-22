@@ -3,7 +3,6 @@ import { contactSchema } from '$lib/validateSchema';
 import { fail, redirect } from '@sveltejs/kit';
 
 export const load = async (event) => {
-
 	const form = await superValidate(event, contactSchema);
 	return { form };
 };
