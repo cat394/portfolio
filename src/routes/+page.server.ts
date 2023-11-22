@@ -17,8 +17,7 @@ export const actions = {
 		if (!form.valid) {
 			return fail(400, { form });
 		}
-
-		const prefilledLink = `https://docs.google.com/forms/d/e/1FAIpQLSfT5C_NH0EaB5aLbkNoyYW7PNi_XiW-XsnMLIU5vbZrEU0jNw/formResponse?usp=pp_url&entry.1780581565=${name}&entry.2138521789=${email}&entry.280613884=${message}&submit=Submit`;
+		const prefilledLink = `https://docs.google.com/forms/d/e/1FAIpQLSc7eaEpVlxwH65uOBuSh29SyhhM3L7nlJoao1tuUNn8jPB_5Q/formResponse?usp=pp_url&entry.1459365682=${name}&entry.914930230=${email}&entry.2102059464=${message}&submit=Sumbit`;
 		const res = await fetch(prefilledLink);
 
 		if (res.status === 200) {

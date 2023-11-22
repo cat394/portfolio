@@ -201,6 +201,6 @@ textarea::placeholder {
 }
 
 .prose p {
-	letter-spacing: var(--font-letterspacing-3);
+	letter-spacing: var(--font-letterspacing-5);
 	min-width: 100%;
 }
