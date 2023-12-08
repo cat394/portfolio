@@ -31,7 +31,7 @@
 		width: 100%;
 		display: grid;
 		grid-template-rows: 1fr auto;
-		min-height: 100vh;
+		min-height: 100dvh;
 		position: relative;
 		z-index: 1;
 	}

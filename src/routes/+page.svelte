@@ -2,11 +2,9 @@
 	import { skills } from '$lib/data/skills';
 	import Container from '$lib/components/utils/container.svelte';
 	import ContentsField from '$lib/components/utils/contentsField.svelte';
-	import Sentence from '$lib/components/utils/sentence.svelte';
 	import Hero from '$lib/components/hero.svelte';
 	import List from '$lib/components/utils/list/list.svelte';
 	import Gallery from '$lib/components/gallery.svelte';
-	import Divider from '$lib/components/utils/divider.svelte';
 	import Label from '$lib/components/utils/form/label.svelte';
 	import Input from '$lib/components/utils/form/input.svelte';
 	import Textarea from '$lib/components/utils/form/textarea.svelte';

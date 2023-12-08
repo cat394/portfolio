@@ -3,14 +3,11 @@ import { browser } from '$app/environment';
 
 type Theme = 'light' | 'dark';
 
-// we set the theme in `app.html` to prevent flashing
 const userTheme = browser && localStorage.getItem('color-scheme');
 
-// create the store
 export const theme = writable(userTheme ?? 'dark');
 
-// update the theme
-export function toggleTheme() {
+export const toggleTheme = () => {
 	theme.update((currentTheme) => {
 		const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
@@ -21,7 +18,4 @@ export function toggleTheme() {
 	});
 }
 
-// set the theme
-export function setTheme(newTheme: Theme) {
-	theme.set(newTheme);
-}
+export const setTheme = (newTheme: Theme) => theme.set(newTheme);
