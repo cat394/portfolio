@@ -1,11 +1,11 @@
-export type SiteInfos = {
+export type SiteInfo = {
   skills: string[];
   url: string;
   title: string;
   description: string;
   imageName: string;
   numberOfImage: number;
-}[];
+};
 
 const websites =[
   {
@@ -23,7 +23,7 @@ const websites =[
     imageName: 'vellmo'
   },
   {
-    title: "Kokomi's trave. diary",
+    title: "Kokomi's travel diary",
     description: '架空の少女であるKokomiの旅のブログサイトです。緑色をテーマにした、こちらも可愛らしいデザインです。キャラクターの立ち絵から考えて作り、タグによる検索機能もあります。',
     url: 'https://kokomi-travel-diary.vercel.app',
     skills: 'SvelteKit,Tailwind,Open props',
@@ -38,7 +38,7 @@ const websites =[
   },
 ]
 
-export const creations = websites.map(website => ({
+export const creations: SiteInfo[] = websites.map(website => ({
   ...website,
   skills: website.skills.split(","),
   numberOfImage: 4
