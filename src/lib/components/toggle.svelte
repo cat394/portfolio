@@ -1,20 +1,20 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition';
-	import { Moon, Sun } from 'lucide-svelte';
+	import { SunMoon } from 'lucide-svelte';
 	import { strokeWidth } from '$lib/stores';
-	import { theme, toggleTheme } from '$lib/settings/theme';
+	import { toggleTheme } from '$lib/settings/theme';
+
+	function handleClick (element: HTMLButtonElement) {
+		element.addEventListener('click', toggleTheme);
+		return {
+			destroy() {
+				element.removeEventListener('click', toggleTheme)
+			}
+		}
+	}
 </script>
 
-<button on:click={toggleTheme} aria-label="Toggle theme">
-	{#if $theme === 'dark'}
-		<div in:fly={{ y: 10 }}>
-			<Sun strokeWidth={$strokeWidth} />
-		</div>
-	{:else}
-		<div in:fly={{ y: -10 }}>
-			<Moon strokeWidth={$strokeWidth} />
-		</div>
-	{/if}
+<button aria-label="Toggle theme" use:handleClick>
+	<div><SunMoon strokeWidth={$strokeWidth}/></div>
 </button>
 
 <style>

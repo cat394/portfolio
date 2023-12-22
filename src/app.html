@@ -49,9 +49,12 @@
 
 		<script type="module">
 			const theme = localStorage.getItem('color-scheme');
-			theme
-				? document.documentElement.setAttribute('color-scheme', theme)
-				: localStorage.setItem('color-scheme', 'dark');
+			if (!theme) {
+				localStorage.setItem('color-scheme', 'dark');
+			}
+			if (theme === "light") {
+				document.documentElement.classList.add('light');
+			}
 		</script>
 	</head>
 	<body data-sveltekit-preload-data="hover">

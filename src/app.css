@@ -31,8 +31,6 @@ html {
 }
 
 :root {
-	color-scheme: dark;
-
 	--brand: var(--brand-dark);
 	--text-1: var(--text-1-dark);
 	--text-2: var(--text-2-dark);
@@ -42,35 +40,7 @@ html {
 	--item: var(--item-dark);
 }
 
-@media (prefers-color-scheme: light) {
-	:root {
-		color-scheme: light;
-
-		--brand: var(--brand-light);
-		--text-1: var(--text-1-light);
-		--text-2: var(--text-2-light);
-		--background-1: var(--background-1-light);
-		--background-2: var(--background-2-light);
-		--accent: var(--accent-light);
-		--item: var(--item-light);
-	}
-}
-
-[color-scheme='dark'] {
-	color-scheme: dark;
-
-	--brand: var(--brand-dark);
-	--text-1: var(--text-1-dark);
-	--text-2: var(--text-2-dark);
-	--background-1: var(--background-1-dark);
-	--background-2: var(--background-2-dark);
-	--accent: var(--accent-dark);
-	--item: var(--item-dark);
-}
-
-[color-scheme='light'] {
-	color-scheme: light;
-
+.light:root {
 	--brand: var(--brand-light);
 	--text-1: var(--text-1-light);
 	--text-2: var(--text-2-light);
