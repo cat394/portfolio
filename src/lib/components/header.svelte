@@ -11,18 +11,8 @@
 			<h1>Who is Ryo?</h1>
 			<ul class="social-icons">
 				<li>
-					<a class="twitter" href="https://twitter.com/RYO_001231">
-						<Twitter strokeWidth={$strokeWidth} />
-					</a>
-				</li>
-				<li>
 					<a class="github" href="https://github.com/cat394">
 						<Github strokeWidth={$strokeWidth} />
-					</a>
-				</li>
-				<li>
-					<a class="instagram" href="https://www.instagram.com/ryo_001231/">
-						<Instagram strokeWidth={$strokeWidth} />
 					</a>
 				</li>
 			</ul>
